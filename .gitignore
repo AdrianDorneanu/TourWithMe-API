@@ -1,0 +1,11 @@
+# Compiled output
+dist
+
+# Dependencies
+node_modules
+
+# IDE
+.idea
+
+# Miscellaneous
+.env
