@@ -43,7 +43,12 @@ export async function login(req: Request, res: Response) {
     res.cookie('jwt', token, cookieOptions);
 
     return res.status(200).send({
-      message: 'Successfully logged in',
+      token,
+      user: {
+        id: existingUser[0].user_id,
+        username: existingUser[0].username,
+        email: existingUser[0].email_address,
+      },
     });
   } catch (error) {
     console.error('Error during user login: ', error);
