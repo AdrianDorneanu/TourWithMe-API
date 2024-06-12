@@ -12,9 +12,7 @@ export async function login(req: Request, res: Response) {
      * Check if user sent required properties.
      */
     if (!email || !password) {
-      return res.status(400).send({
-        error: 'Please enter your email and password',
-      });
+      return res.status(400).send({});
     }
 
     /**
